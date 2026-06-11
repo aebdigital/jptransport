@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Building2, CheckCircle2, Home, PackageCheck, ShieldCheck, Truck } from "lucide-react";
 import { ContactPanel } from "@/components/ContactPanel";
 import { cityLinks } from "@/data/navigation";
@@ -58,25 +59,31 @@ export function HomePage({ page }: { page: SitePage }) {
   return (
     <>
       <section className="relative overflow-hidden bg-slate-950 text-white">
-        <img
-          src="/hero-moving.jpg"
+        <Image
+          src="/hero-moving.webp"
           alt=""
+          fill
+          priority
+          sizes="100vw"
+          quality={72}
           className="absolute inset-0 h-full w-full object-cover object-[58%_42%]"
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,6,23,0.84)_0%,rgba(15,23,42,0.72)_42%,rgba(30,64,175,0.34)_72%,rgba(2,6,23,0.1)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,6,23,0.84)_0%,rgba(15,23,42,0.72)_42%,rgba(13,148,136,0.34)_72%,rgba(2,6,23,0.1)_100%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,6,23,0.12),rgba(2,6,23,0.46))]" />
 
         <div className="relative mx-auto grid min-h-[78vh] max-w-7xl items-center px-4 py-16 lg:px-6">
           <div className="max-w-3xl">
-            <p className="inline-flex rounded-md bg-white/15 px-3 py-1.5 text-sm font-black uppercase text-white ring-1 ring-white/25 backdrop-blur">Sťahovanie, preprava, vypratávanie</p>
-            <h1 className="mt-5 text-5xl font-black tracking-normal sm:text-6xl lg:text-7xl">JP TRANSPORT</h1>
+            <p className="inline-flex rounded-md bg-teal-500/25 px-3 py-1.5 text-sm font-black uppercase text-white ring-1 ring-teal-200/60 backdrop-blur">Sťahovanie, preprava, vypratávanie</p>
+            <h1 className="mt-5 text-5xl font-black tracking-normal sm:text-6xl lg:text-7xl">
+              Sťahovanie <span className="text-yellow-300">24/7</span>
+            </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-white/90 sm:text-xl">{page.description || page.summary}</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="tel:+421944404495" className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 font-black text-blue-700 transition hover:bg-blue-50">
+              <a href="tel:+421944404495" className="inline-flex items-center gap-2 rounded-lg bg-yellow-400 px-5 py-3 font-black text-black transition hover:bg-yellow-300">
                 Zavolať teraz
               </a>
-              <Link href="/cennik-stahovania.html" className="inline-flex items-center gap-2 rounded-lg border border-white/30 bg-white/10 px-5 py-3 font-black text-white backdrop-blur transition hover:bg-white/20">
+              <Link href="/cennik-stahovania.html" className="inline-flex items-center gap-2 rounded-lg border border-teal-200/50 bg-teal-500/20 px-5 py-3 font-black text-white backdrop-blur transition hover:bg-teal-500/30">
                 Pozrieť cenník
               </Link>
             </div>
@@ -99,10 +106,10 @@ export function HomePage({ page }: { page: SitePage }) {
         </div>
       </section>
 
-      <section className="bg-blue-50 px-4 py-14">
+      <section className="bg-teal-50 px-4 py-14">
         <div className="mx-auto max-w-7xl lg:px-6">
           <div className="max-w-2xl">
-            <p className="text-sm font-black uppercase text-blue-700">Služby</p>
+            <p className="text-sm font-black uppercase text-yellow-600">Služby</p>
             <h2 className="mt-2 text-3xl font-black tracking-normal text-black sm:text-4xl">Všetko okolo presunu na jednom mieste</h2>
           </div>
 
@@ -111,11 +118,11 @@ export function HomePage({ page }: { page: SitePage }) {
               const Icon = service.icon;
 
               return (
-                <Link id={service.id} key={service.href} href={service.href} className="group rounded-lg border border-blue-100 bg-white p-5 transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-blue-50 text-blue-700">
+                <Link id={service.id} key={service.href} href={service.href} className="group rounded-lg border border-teal-100 bg-white p-5 transition hover:-translate-y-1 hover:border-yellow-300 hover:shadow-lg">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-yellow-100 text-teal-700">
                     <Icon size={22} />
                   </span>
-                  <h3 className="mt-5 text-lg font-black text-black group-hover:text-blue-700">{service.title}</h3>
+                  <h3 className="mt-5 text-lg font-black text-black group-hover:text-teal-700">{service.title}</h3>
                   <p className="mt-3 text-sm leading-6 text-black">{service.text}</p>
                 </Link>
               );
@@ -127,8 +134,8 @@ export function HomePage({ page }: { page: SitePage }) {
       <section className="bg-white px-4 py-16">
         <div className="mx-auto max-w-7xl lg:px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-black uppercase text-blue-700">Prečo JP TRANSPORT</p>
-            <h2 className="mt-2 text-3xl font-black tracking-normal text-black sm:text-4xl">Prečo si vybrať JP TRANSPORT?</h2>
+            <p className="text-sm font-black uppercase text-yellow-600">Prečo Sťahovanie 24/7</p>
+            <h2 className="mt-2 text-3xl font-black tracking-normal text-black sm:text-4xl">Prečo si vybrať Sťahovanie 24/7?</h2>
             <p className="mt-4 text-base leading-7 text-black">
               Lebo s nami je sťahovanie bez starostí. Sme rýchli, precízni a dochvíľni, s férovým prístupom od prvého kontaktu.
             </p>
@@ -136,8 +143,8 @@ export function HomePage({ page }: { page: SitePage }) {
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {whyItems.map((item) => (
-              <div key={item.title} className="rounded-lg border border-blue-100 bg-white p-5 shadow-sm">
-                <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-blue-50 text-blue-700">
+              <div key={item.title} className="rounded-lg border border-teal-100 bg-white p-5 shadow-sm">
+                <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-yellow-100 text-teal-700">
                   <CheckCircle2 size={22} />
                 </span>
                 <h3 className="mt-4 font-black text-black">{item.title}</h3>
@@ -146,7 +153,7 @@ export function HomePage({ page }: { page: SitePage }) {
             ))}
           </div>
 
-          <div className="mt-6 grid gap-4 rounded-lg border border-blue-100 bg-blue-50 p-5 sm:grid-cols-3">
+          <div className="mt-6 grid gap-4 rounded-lg border border-yellow-200 bg-yellow-50 p-5 sm:grid-cols-3">
             {[
               ["Presný termín", "Dohoda platí a tím príde pripravený."],
               ["Bezpečná manipulácia", "Nábytok a veci chránime počas presunu."],
@@ -161,7 +168,7 @@ export function HomePage({ page }: { page: SitePage }) {
         </div>
       </section>
 
-      <section className="bg-blue-600 px-4 py-10 text-white">
+      <section className="bg-teal-600 px-4 py-10 text-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-5 lg:flex-row lg:items-center lg:justify-between lg:px-6">
           <div className="flex items-start gap-3">
             <ShieldCheck size={28} className="mt-1 shrink-0" />
@@ -172,7 +179,7 @@ export function HomePage({ page }: { page: SitePage }) {
               </p>
             </div>
           </div>
-          <Link href="/stahovanie-europa.html" className="inline-flex w-fit rounded-lg bg-white px-5 py-3 font-black text-blue-700 transition hover:bg-blue-50">
+          <Link href="/stahovanie-europa.html" className="inline-flex w-fit rounded-lg bg-yellow-400 px-5 py-3 font-black text-black transition hover:bg-yellow-300">
             Európske sťahovanie
           </Link>
         </div>

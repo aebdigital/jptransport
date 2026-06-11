@@ -24,42 +24,42 @@ export function ContactPanel() {
   }
 
   return (
-    <section id="kontakt" className="bg-blue-50 px-4 py-16 text-black">
+    <section id="kontakt" className="bg-teal-50 px-4 py-16 text-black">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:px-6">
         <div>
-          <p className="text-sm font-black uppercase text-blue-700">Kontakt</p>
+          <p className="text-sm font-black uppercase text-teal-700">Kontakt</p>
           <h2 className="mt-3 text-3xl font-black tracking-normal sm:text-4xl">Nezáväzná cenová ponuka</h2>
           <p className="mt-4 max-w-xl text-base leading-7 text-black">
             Napíšte základné údaje k sťahovaniu a otvorí sa pripravený email. Pri urgentnom termíne je najrýchlejšie zavolať priamo.
           </p>
 
           <div className="mt-8 grid gap-3 text-sm">
-            <a href="tel:+421944404495" className="inline-flex items-center gap-3 rounded-lg bg-blue-600 px-4 py-3 font-black text-white transition hover:bg-blue-700">
+            <a href="tel:+421944404495" className="inline-flex items-center gap-3 rounded-lg bg-teal-600 px-4 py-3 font-black text-white transition hover:bg-teal-700">
               <Phone size={18} />
               +421 944 404 495
             </a>
-            <a href="mailto:patrik.janicek358@gmail.com" className="inline-flex items-center gap-3 rounded-lg border border-blue-200 bg-white px-4 py-3 font-semibold text-black transition hover:bg-blue-100 hover:text-blue-700">
+            <a href="mailto:patrik.janicek358@gmail.com" className="inline-flex items-center gap-3 rounded-lg border border-teal-200 bg-white px-4 py-3 font-semibold text-black transition hover:bg-teal-100 hover:text-teal-700">
               <Mail size={18} />
               patrik.janicek358@gmail.com
             </a>
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="grid gap-4 rounded-lg border border-blue-100 bg-white p-5 text-black shadow-sm sm:p-6">
+        <form onSubmit={handleSubmit} className="grid gap-4 rounded-lg border border-teal-100 bg-white p-5 text-black shadow-sm sm:p-6">
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="grid gap-2 text-sm font-bold">
               Meno
-              <input value={name} onChange={(event) => setName(event.target.value)} className="rounded-md border border-blue-200 px-3 py-3 font-normal outline-none ring-blue-300 transition focus:ring-2" />
+              <input value={name} onChange={(event) => setName(event.target.value)} className="rounded-md border border-teal-200 px-3 py-3 font-normal outline-none ring-teal-300 transition focus:ring-2" />
             </label>
             <label className="grid gap-2 text-sm font-bold">
               Telefón
-              <input value={phone} onChange={(event) => setPhone(event.target.value)} className="rounded-md border border-blue-200 px-3 py-3 font-normal outline-none ring-blue-300 transition focus:ring-2" />
+              <input value={phone} onChange={(event) => setPhone(event.target.value)} className="rounded-md border border-teal-200 px-3 py-3 font-normal outline-none ring-teal-300 transition focus:ring-2" />
             </label>
           </div>
 
           <label className="grid gap-2 text-sm font-bold">
             Služba
-            <select value={service} onChange={(event) => setService(event.target.value)} className="rounded-md border border-blue-200 px-3 py-3 font-normal outline-none ring-blue-300 transition focus:ring-2">
+            <select value={service} onChange={(event) => setService(event.target.value)} className="rounded-md border border-teal-200 px-3 py-3 font-normal outline-none ring-teal-300 transition focus:ring-2">
               <option>Sťahovanie bytu</option>
               <option>Sťahovanie domu</option>
               <option>Sťahovanie firmy</option>
@@ -76,12 +76,12 @@ export function ContactPanel() {
               value={message}
               onChange={(event) => setMessage(event.target.value)}
               rows={5}
-              className="resize-none rounded-md border border-blue-200 px-3 py-3 font-normal outline-none ring-blue-300 transition focus:ring-2"
+              className="resize-none rounded-md border border-teal-200 px-3 py-3 font-normal outline-none ring-teal-300 transition focus:ring-2"
               placeholder="Odkiaľ, kam, termín, poschodie, približný objem..."
             />
           </label>
 
-          <button type="submit" className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-5 py-3 font-black text-white transition hover:bg-blue-700">
+          <button type="submit" className="inline-flex items-center justify-center gap-2 rounded-lg bg-teal-600 px-5 py-3 font-black text-white transition hover:bg-teal-700">
             <Send size={18} />
             Pripraviť email
           </button>

@@ -39,10 +39,10 @@ export function PriceCalculator() {
   }
 
   return (
-    <section className="bg-blue-50 px-4 py-14">
+    <section className="bg-teal-50 px-4 py-14">
       <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:px-6">
         <div>
-          <p className="inline-flex items-center gap-2 text-sm font-black uppercase text-blue-700">
+          <p className="inline-flex items-center gap-2 text-sm font-black uppercase text-yellow-600">
             <Calculator size={18} />
             Orientačný výpočet
           </p>
@@ -51,20 +51,20 @@ export function PriceCalculator() {
             Kalkulačka vychádza zo zdrojového cenníka. Výsledok je orientačný, finálnu ponuku potvrdíme podľa objemu, prístupu a termínu.
           </p>
 
-          <div className="mt-6 rounded-lg border border-blue-100 bg-white p-5 text-black shadow-sm">
+          <div className="mt-6 rounded-lg border border-teal-100 bg-white p-5 text-black shadow-sm">
             <p className="text-sm text-black">Orientačná cena od</p>
-            <p className="mt-2 text-5xl font-black text-blue-700">{price} €</p>
-            <a href="/#kontakt" className="mt-5 inline-flex rounded-md bg-blue-600 px-4 py-3 text-sm font-black text-white transition hover:bg-blue-700">
+            <p className="mt-2 text-5xl font-black text-teal-700">{price} €</p>
+            <a href="/#kontakt" className="mt-5 inline-flex rounded-md bg-yellow-400 px-4 py-3 text-sm font-black text-black transition hover:bg-yellow-300">
               Chcem nezáväznú ponuku
             </a>
           </div>
         </div>
 
-        <div className="grid gap-4 rounded-lg border border-blue-100 bg-white p-5 shadow-sm sm:p-6">
+        <div className="grid gap-4 rounded-lg border border-teal-100 bg-white p-5 shadow-sm sm:p-6">
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="grid gap-2 text-sm font-bold text-black">
               Typ sťahovania
-              <select value={movingType} onChange={(event) => setMovingType(Number(event.target.value))} className="rounded-md border border-blue-200 px-3 py-3 font-normal outline-none ring-blue-300 focus:ring-2">
+              <select value={movingType} onChange={(event) => setMovingType(Number(event.target.value))} className="rounded-md border border-teal-200 px-3 py-3 font-normal outline-none ring-teal-300 focus:ring-2">
                 {movingTypes.map((item) => (
                   <option key={item.label} value={item.value}>
                     {item.label} od {item.value} €
@@ -75,7 +75,7 @@ export function PriceCalculator() {
 
             <label className="grid gap-2 text-sm font-bold text-black">
               Vzdialenosť
-              <select value={distance} onChange={(event) => setDistance(Number(event.target.value))} className="rounded-md border border-blue-200 px-3 py-3 font-normal outline-none ring-blue-300 focus:ring-2">
+              <select value={distance} onChange={(event) => setDistance(Number(event.target.value))} className="rounded-md border border-teal-200 px-3 py-3 font-normal outline-none ring-teal-300 focus:ring-2">
                 {distances.map((item) => (
                   <option key={item.label} value={item.value}>
                     {item.label}
@@ -93,13 +93,13 @@ export function PriceCalculator() {
                 min={0}
                 value={floors}
                 onChange={(event) => setFloors(Number(event.target.value))}
-                className="rounded-md border border-blue-200 px-3 py-3 font-normal outline-none ring-blue-300 focus:ring-2"
+                className="rounded-md border border-teal-200 px-3 py-3 font-normal outline-none ring-teal-300 focus:ring-2"
               />
             </label>
 
             <label className="grid gap-2 text-sm font-bold text-black">
               Výťah
-              <select value={hasElevator ? "yes" : "no"} onChange={(event) => setHasElevator(event.target.value === "yes")} className="rounded-md border border-blue-200 px-3 py-3 font-normal outline-none ring-blue-300 focus:ring-2">
+              <select value={hasElevator ? "yes" : "no"} onChange={(event) => setHasElevator(event.target.value === "yes")} className="rounded-md border border-teal-200 px-3 py-3 font-normal outline-none ring-teal-300 focus:ring-2">
                 <option value="yes">Áno</option>
                 <option value="no">Nie</option>
               </select>
@@ -112,12 +112,12 @@ export function PriceCalculator() {
               const checked = selectedAddons.includes(addon.id);
 
               return (
-                <label key={addon.id} className="flex cursor-pointer items-center justify-between gap-4 rounded-md border border-blue-100 px-3 py-3 transition hover:border-blue-300">
+                <label key={addon.id} className="flex cursor-pointer items-center justify-between gap-4 rounded-md border border-teal-100 px-3 py-3 transition hover:border-yellow-300">
                   <span className="flex items-center gap-3 text-sm font-semibold text-black">
-                    <input type="checkbox" checked={checked} onChange={() => toggleAddon(addon.id)} className="h-5 w-5 accent-blue-600" />
+                    <input type="checkbox" checked={checked} onChange={() => toggleAddon(addon.id)} className="h-5 w-5 accent-teal-600" />
                     {addon.label}
                   </span>
-                  <span className="inline-flex items-center gap-1 text-sm font-black text-blue-700">
+                  <span className="inline-flex items-center gap-1 text-sm font-black text-teal-700">
                     {checked ? <CheckCircle2 size={16} /> : null}+{addon.value} €
                   </span>
                 </label>

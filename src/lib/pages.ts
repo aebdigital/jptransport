@@ -1,7 +1,7 @@
 import { scrapedPages } from "@/data/scraped-pages";
 import type { SitePage } from "@/types/site";
 
-export const siteOrigin = "https://www.stahovanie-jptransport.sk";
+export const siteOrigin = "https://stahovanie-24.sk";
 
 export function pathFromSegments(slug?: string[]) {
   const joined = slug?.join("/") ?? "";
@@ -13,7 +13,7 @@ export function findPage(path: string): SitePage | undefined {
 }
 
 export function getImageForPage(page: SitePage) {
-  return page.images.find((image) => image.src.includes("gallery/"))?.src || page.images[0]?.src || "/source/IMG_0714.jpg";
+  return page.images.find((image) => image.src.includes("gallery/"))?.src || page.images[0]?.src || "/hero-moving.webp";
 }
 
 export function getHomePage() {

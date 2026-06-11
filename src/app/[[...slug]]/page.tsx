@@ -23,11 +23,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!page) {
     return {
-      title: "Stránka sa nenašla | JP TRANSPORT",
+      title: "Stránka sa nenašla | Sťahovanie 24/7",
     };
   }
 
-  const image = page.images[0]?.src || "/source/IMG_0714.jpg";
+  const image = "/hero-moving.webp";
 
   return {
     title: page.title,
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: page.title,
       description: page.description || page.summary,
       url: `${siteOrigin}${page.path === "/" ? "" : page.path}`,
-      siteName: "JP TRANSPORT",
+      siteName: "Sťahovanie 24/7",
       locale: "sk_SK",
       type: "website",
       images: [

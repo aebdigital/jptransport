@@ -6,9 +6,9 @@ import { Header } from "@/components/Header";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.stahovanie-jptransport.sk"),
+  metadataBase: new URL("https://stahovanie-24.sk"),
   title: {
-    default: "JP TRANSPORT | Sťahovanie, preprava a vypratávanie",
+    default: "Sťahovanie 24/7 | Sťahovanie, preprava a vypratávanie",
     template: "%s",
   },
   description: "Profesionálne sťahovanie, vypratávanie a autodoprava po Slovensku aj v Európe.",
