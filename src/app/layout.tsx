@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { CookieConsent } from "@/components/CookieConsent";
 import { FloatingActions } from "@/components/FloatingActions";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         <main>{children}</main>
         <Footer />
         <FloatingActions />
+        <CookieConsent />
       </body>
     </html>
   );

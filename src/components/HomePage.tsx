@@ -65,7 +65,7 @@ export function HomePage({ page }: { page: SitePage }) {
           fill
           priority
           sizes="100vw"
-          quality={72}
+          quality={75}
           className="absolute inset-0 h-full w-full object-cover object-[58%_42%]"
           aria-hidden="true"
         />

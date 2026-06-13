@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronDown, MapPin, Menu, Phone, X } from "lucide-react";
 import { useMemo, useState } from "react";
 import { cityLinks, primaryLinks } from "@/data/navigation";
@@ -15,9 +16,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-teal-100 bg-white/95 text-black shadow-sm backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 lg:px-6">
         <Link href="/" className="flex min-w-0 items-center" aria-label="Sťahovanie 24/7 domov">
-          <span className="text-lg font-black leading-tight tracking-normal sm:text-xl">
-            <span className="text-teal-700">Sťahovanie</span> <span className="text-yellow-600">24/7</span>
-          </span>
+          <Image src="/logo2.png" alt="Sťahovanie 24/7" width={212} height={60} priority className="h-12 w-auto shrink-0 object-contain sm:h-14" />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Hlavná navigácia">

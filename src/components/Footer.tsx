@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { CookieSettingsButton } from "@/components/CookieSettingsButton";
 import { cityLinks, priceLinks, primaryLinks } from "@/data/navigation";
 
 export function Footer() {
@@ -8,9 +10,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:px-6">
         <div>
           <div className="mb-4">
-            <span className="text-lg font-black leading-tight">
-              <span className="text-teal-700">Sťahovanie</span> <span className="text-yellow-600">24/7</span>
-            </span>
+            <Image src="/logo2.png" alt="Sťahovanie 24/7" width={212} height={60} className="h-12 w-auto object-contain" />
           </div>
           <p className="max-w-sm text-sm leading-6 text-black">
             Byty, domy, firmy, sklady aj väčšie presuny riešime načas, férovo a s dôrazom na bezpečnú manipuláciu.
@@ -64,8 +64,16 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-teal-100 px-4 py-5 text-center text-xs text-black">
-        © Sťahovanie 24/7. Všetky práva vyhradené.
+      <div className="border-t border-teal-100 px-4 py-5 text-xs text-black">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 text-center sm:flex-row sm:text-left lg:px-6">
+          <p>© Sťahovanie 24/7. Všetky práva vyhradené.</p>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <Link href="/ochrana-osobnych-udajov" className="font-semibold underline-offset-4 transition hover:text-teal-700 hover:underline">
+              Ochrana osobných údajov
+            </Link>
+            <CookieSettingsButton />
+          </div>
+        </div>
       </div>
     </footer>
   );
